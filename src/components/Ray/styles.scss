@@ -1,0 +1,68 @@
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.ray-container {
+  z-index: 0;
+  position: relative;
+  width: 200px;
+  height: 100%;
+  bottom: 0;
+  transform-origin: center bottom;
+  animation: move 45.1s infinite reverse linear;
+  .ray {
+    width: 398px;
+    height: 710px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-origin: center bottom;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+    background-image: linear-gradient(
+      180.68deg,
+      rgba(255, 229, 0, 0) -1.18%,
+      rgba(255, 230, 9, 0) 3.33%,
+      rgba(255, 231, 23, 0.003) 10.55%,
+      rgba(255, 233, 36, 0.005) 17.77%,
+      rgba(255, 234, 47, 0.009) 25.89%,
+      rgba(255, 234, 56, 0.03) 34.01%,
+      rgba(255, 235, 62, 0.05) 42.13%,
+      rgba(255, 236, 67, 0.09) 51.15%,
+      rgba(255, 236, 70, 0.12) 60.17%,
+      rgba(255, 236, 71, 0.2) 71.89%
+    );
+  }
+
+  .ray:nth-child(1) {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  .ray:nth-child(2) {
+    transform: translateX(-50%) rotate(40deg);
+  }
+  .ray:nth-child(3) {
+    transform: translateX(-50%) rotate(80deg);
+  }
+  .ray:nth-child(4) {
+    transform: translateX(-50%) rotate(120deg);
+  }
+  .ray:nth-child(5) {
+    transform: translateX(-50%) rotate(160deg);
+  }
+  .ray:nth-child(6) {
+    transform: translateX(-50%) rotate(200deg);
+  }
+  .ray:nth-child(7) {
+    transform: translateX(-50%) rotate(240deg);
+  }
+  .ray:nth-child(8) {
+    transform: translateX(-50%) rotate(280deg);
+  }
+  .ray:nth-child(9) {
+    transform: translateX(-50%) rotate(320deg);
+  }
+}
