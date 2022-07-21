@@ -1,0 +1,196 @@
+@keyframes bounceLeftCoin {
+  0% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 15%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+
+@keyframes bounceRightCoin {
+  0% {
+    bottom: 0%;
+  }
+  50% {
+    bottom: 10%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+
+@keyframes shootingStar1 {
+  0% {
+    bottom: 0%;
+    filter: blur(0);
+  }
+  20% {
+    filter: blur(1px);
+  }
+  50% {
+    right: 53%;
+    bottom: 20%;
+    filter: blur(2px);
+  }
+  100% {
+    right: 51%;
+    bottom: 37%;
+    display: none;
+    opacity: 0.2;
+    filter: blur(5px);
+  }
+}
+
+@keyframes shootingStar2 {
+  0% {
+    bottom: 0%;
+  }
+  50% {
+    right: 55%;
+    bottom: 23%;
+    // opacity: 0.2;
+    filter: blur(1px);
+  }
+  65%{
+    right: 53%;
+    bottom: 35%;
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+    filter: blur(2px);
+  }
+  100% {
+    right: 59%;
+    bottom: 45%;
+    opacity: 0.2;
+    filter: blur(5px);
+    display: none;
+
+  }
+}
+
+@keyframes shootingStar3 {
+  0% {
+    bottom: 0%;
+  }
+  50% {
+    right: 45%;
+    bottom: 25%;
+  }
+  100% {
+    right: 40%;
+    bottom: 40%;
+    display: none;
+  }
+}
+
+@keyframes shootingStar4 {
+  0% {
+    bottom: 0%;
+  }
+  50% {
+    right: 40%;
+    bottom: 25%;
+  }
+  100% {
+    right: 35%;
+    bottom: 50%;
+    display: none;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  bottom: 0;
+  z-index: 4;
+
+  .left-coin,
+  .right-coin {
+    width: 145px;
+    position: absolute;
+    left: 30%;
+    bottom: 5%;
+    transform: translate(-30%, 0);
+    animation: bounceLeftCoin 5s infinite;
+  }
+  .goldPot {
+    width: 425px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    transform-origin: center bottom;
+  }
+  .right-coin {
+    left: 70%;
+    transform: translate(-70%, 0);
+    bottom: 0%;
+    animation: bounceRightCoin 5.1s infinite;
+  }
+  .first-star {
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+  }
+
+  .second-star {
+    position: absolute;
+    left: 20%;
+    bottom: 30%;
+  }
+  .third-star {
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+  }
+  .shooting-first {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    animation: shootingStar1 10s infinite ease-out;
+    // mix-blend-mode: overlay;
+// opacity: 0.2;
+/* Colors/Neutral/White/100% */
+
+// border: 2px solid #FFFFFF;
+filter: blur(1px);
+  }
+  .shooting-second {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    animation: shootingStar2 7s infinite ease-out;
+    filter: blur(1px);
+  }
+  .shooting-third {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    animation: shootingStar3 8s infinite ease-out;
+    filter: blur(1px);
+  }
+  .shooting-fouth {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    animation: shootingStar4 9s infinite ease-out;
+    filter: blur(1px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .goldPot {
+    width: 100vw;
+  }
+  .leftCoin {
+    left: 10%;
+  }
+  .rightCoin {
+    left: 85%;
+  }
+}
