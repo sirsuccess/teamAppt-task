@@ -3,7 +3,7 @@ import "./styles.scss";
 import Logo from "../../assets/images/logo.png";
 import Calendar from "../../assets/images/calendar.png";
 
-export default function Nav() {
+function Nav() {
   return (
     <header className="navbar">
       <img src={Logo} alt="" />
@@ -19,3 +19,5 @@ export default function Nav() {
     </header>
   );
 }
+
+export default Nav
